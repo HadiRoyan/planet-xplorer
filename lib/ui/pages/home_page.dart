@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:planet_xplorer/core/app/route_name.dart';
 
-import '../../core/router.dart';
 import '../../logic/cubit/tab_cubit.dart';
-import '../tabs/quiz_tab.dart';
 import '../tabs/home_tab.dart';
 import '../tabs/profile_tab.dart';
+import '../tabs/quiz_tab.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -33,13 +33,13 @@ class _HomePageState extends State<HomePage> {
         return Scaffold(
           appBar: state == 2
               ? AppBar(
-                  title: const Text('Flutter App'),
+                  title: const Text('Profile'),
                   foregroundColor: Colors.white,
                   backgroundColor: Colors.blueAccent,
                   actions: [
                     IconButton(
                       icon: const Icon(Icons.settings),
-                      onPressed: () => context.push(AppRoute.setting.path),
+                      onPressed: () => context.push(RouteName.setting.path),
                     ),
                   ],
                 )
