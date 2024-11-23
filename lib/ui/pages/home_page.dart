@@ -31,20 +31,22 @@ class _HomePageState extends State<HomePage> {
     return BlocBuilder<TabCubit, int>(
       builder: (context, state) {
         return Scaffold(
-          appBar: AppBar(
-            title: const Text('Flutter App'),
-            foregroundColor: Colors.white,
-            backgroundColor: Colors.blueAccent,
-            actions: state == 2
-                ? [
+          appBar: state == 2
+              ? AppBar(
+                  title: const Text('Flutter App'),
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.blueAccent,
+                  actions: [
                     IconButton(
                       icon: const Icon(Icons.settings),
                       onPressed: () => context.push(AppRoute.setting.path),
                     ),
-                  ]
-                : [],
+                  ],
+                )
+              : null,
+          body: SafeArea(
+            child: _tabs[state],
           ),
-          body: _tabs[state],
           bottomNavigationBar: BottomNavigationBar(
             currentIndex: state,
             onTap: _onItemTapped,
