@@ -1,0 +1,83 @@
+[
+    {
+      "name": "Mercury",
+      "description": "The smallest and closest planet to the Sun. Its surface is filled with craters and is very hot during the day but very cold at night.",
+      "gravity": 3.7,
+      "meanRadius": 2439.7,
+      "moons": 0,
+      "avgTemp": 167,
+      "orbitalPeriod": 88,
+      "rotationPeriod": 1407.6
+    },
+    {
+      "name": "Venus",
+      "description" : "The hottest planet in the solar system due to the extreme greenhouse effect. Often called Earth's “sister” planet due to its similar size.",
+      "gravity": 8.87,
+      "meanRadius": 6051.8,
+      "moons": 0,
+      "avgTemp": 464,
+      "orbitalPeriod": 224.7,
+      "rotationPeriod": -5832.5
+    },
+    {
+      "name": "Earth",
+      "description": "Our planet! The only planet known to have life. It has a perfect atmosphere and water in liquid form.",
+      "gravity": 9.8,
+      "meanRadius": 6371,
+      "moons": 1,
+      "avgTemp": 15,
+      "orbitalPeriod": 365.25,
+      "rotationPeriod": 24
+    },
+    {
+      "name": "Mars",
+      "description": "The red planet that is the target of human exploration. It has the highest mountains and deepest canyons in the solar system.",
+      "gravity": 3.71,
+      "meanRadius": 3389.5,
+      "moons": 2,
+      "avgTemp": -65,
+      "orbitalPeriod": 687,
+      "rotationPeriod": 24.6
+    },
+    {
+      "name": "Jupiter",
+      "description": "The largest planet in the solar system. Has the Great Red Spot, a storm that has been going on for hundreds of years.",
+      "gravity": 24.79,
+      "meanRadius": 69911,
+      "moons": 92,
+      "avgTemp": -145,
+      "orbitalPeriod": 4333,
+      "rotationPeriod": 9.9
+    },
+    {
+      "name": "Saturn",
+      "description": "Famous for its beautiful rings made of ice and rock. It has a very low density and can float on water.",
+      "gravity": 10.44,
+      "meanRadius": 58232,
+      "moons": 145,
+      "avgTemp": -178,
+      "orbitalPeriod": 10759,
+      "rotationPeriod": 10.7
+    },
+    {
+      "name": "Uranus",
+      "description": "A “reclining” planet due to the extreme tilt of its axis (98 degrees). It has a blue-green color due to methane in its atmosphere.",
+      "gravity": 8.69,
+      "meanRadius": 25362,
+      "moons": 27,
+      "avgTemp": -195,
+      "orbitalPeriod": 30687,
+      "rotationPeriod": -17.2
+    },
+    {
+      "name": "Neptune",
+      "description": "The farthest planet from the Sun. It has the strongest winds in the solar system with speeds of up to 2,100 km/h.",
+      "gravity": 11.15,
+      "meanRadius": 24622,
+      "moons": 14,
+      "avgTemp": -201,
+      "orbitalPeriod": 60190,
+      "rotationPeriod": 16.1
+    }
+  ]
+  

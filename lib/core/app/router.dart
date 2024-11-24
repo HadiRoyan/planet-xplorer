@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:planet_xplorer/logic/blocs/planet_bloc/planet_bloc.dart';
 import 'package:planet_xplorer/logic/cubit/tab_cubit.dart';
 import 'package:planet_xplorer/ui/pages/setting_page.dart';
 
@@ -14,8 +15,22 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: RouteName.home.path,
       builder: (BuildContext context, GoRouterState state) {
-        return BlocProvider(
-          create: (context) => TabCubit(),
+        // return BlocProvider(
+        //   create: (context) => TabCubit(),
+        //   child: const HomePage(),
+        // );
+        return MultiBlocProvider(
+          providers: [
+            BlocProvider(
+              create: (context) => TabCubit(),
+            ),
+            BlocProvider(
+              create: (context) => PlanetBloc()
+                ..add(
+                  LoadPlanetEvent(),
+                ),
+            ),
+          ],
           child: const HomePage(),
         );
       },

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:planet_xplorer/core/constants/theme.dart';
+import 'package:planet_xplorer/logic/blocs/planet_bloc/planet_bloc.dart';
 import 'package:planet_xplorer/ui/components/banner_image.dart';
 import 'package:planet_xplorer/ui/components/planet_card.dart';
 
@@ -21,18 +23,32 @@ class HomeTab extends StatelessWidget {
               style: TextStyle(fontSize: 24),
             ),
           ),
-          Container(
-            height: 200,
-            padding: const EdgeInsets.symmetric(horizontal: 4),
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: 9,
-              itemBuilder: (context, index) {
-                return const PlanetCard(
-                  planetName: 'Earth',
+          BlocBuilder<PlanetBloc, PlanetState>(
+            builder: (context, state) {
+              if (state is PlanetLoaded) {
+                return Container(
+                  height: 200,
+                  padding: const EdgeInsets.symmetric(horizontal: 4),
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: state.planetModels.length,
+                    addAutomaticKeepAlives: true,
+                    itemBuilder: (context, index) {
+                      return PlanetCard(
+                        onTap: () {},
+                        planet: state.planetModels[index],
+                      );
+                    },
+                  ),
                 );
-              },
-            ),
+              } else if (state is PlanetError) {
+                return Center(
+                  child: Text(state.message),
+                );
+              } else {
+                return const CircularProgressIndicator();
+              }
+            },
           ),
         ],
       ),
