@@ -1,9 +1,7 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:planet_xplorer/core/entities/planet.dart';
+import 'package:planet_xplorer/core/entities/planet_data.dart';
 import 'package:planet_xplorer/data/model/planet_model.dart';
 
 part 'planet_event.dart';
@@ -26,17 +24,12 @@ class PlanetBloc extends Bloc<PlanetEvent, PlanetState> {
         'assets/json/planets.json',
       );
 
-      List<dynamic> data = json.decode(planetJson);
-
-      List<Planet> planets = data
-          .map((item) => Planet.fromMap(item as Map<String, dynamic>))
+      PlanetData data = PlanetData.fromJson(planetJson);
+      List<PlanetModel> planetModels = data.planetsData
+          .map((planet) => PlanetModel.fromPlanetWithAsset(planet))
           .toList();
 
-      List<PlanetModel> planetModels =
-          planets.map((planet) => PlanetModel.fromPlanetWithAsset(planet))
-          .toList();
-
-      print(planetModels);
+      // print(planetModels);
       emit(PlanetLoaded(planetModels));
     } catch (e) {
       // ignore: avoid_print

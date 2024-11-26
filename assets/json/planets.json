@@ -1,83 +1,327 @@
-[
-    {
-      "name": "Mercury",
-      "description": "The smallest and closest planet to the Sun. Its surface is filled with craters and is very hot during the day but very cold at night.",
-      "gravity": 3.7,
-      "meanRadius": 2439.7,
-      "moons": 0,
-      "avgTemp": 167,
-      "orbitalPeriod": 88,
-      "rotationPeriod": 1407.6
-    },
-    {
-      "name": "Venus",
-      "description" : "The hottest planet in the solar system due to the extreme greenhouse effect. Often called Earth's “sister” planet due to its similar size.",
-      "gravity": 8.87,
-      "meanRadius": 6051.8,
-      "moons": 0,
-      "avgTemp": 464,
-      "orbitalPeriod": 224.7,
-      "rotationPeriod": -5832.5
-    },
-    {
-      "name": "Earth",
-      "description": "Our planet! The only planet known to have life. It has a perfect atmosphere and water in liquid form.",
-      "gravity": 9.8,
-      "meanRadius": 6371,
-      "moons": 1,
-      "avgTemp": 15,
-      "orbitalPeriod": 365.25,
-      "rotationPeriod": 24
-    },
-    {
-      "name": "Mars",
-      "description": "The red planet that is the target of human exploration. It has the highest mountains and deepest canyons in the solar system.",
-      "gravity": 3.71,
-      "meanRadius": 3389.5,
-      "moons": 2,
-      "avgTemp": -65,
-      "orbitalPeriod": 687,
-      "rotationPeriod": 24.6
-    },
-    {
-      "name": "Jupiter",
-      "description": "The largest planet in the solar system. Has the Great Red Spot, a storm that has been going on for hundreds of years.",
-      "gravity": 24.79,
-      "meanRadius": 69911,
-      "moons": 92,
-      "avgTemp": -145,
-      "orbitalPeriod": 4333,
-      "rotationPeriod": 9.9
-    },
-    {
-      "name": "Saturn",
-      "description": "Famous for its beautiful rings made of ice and rock. It has a very low density and can float on water.",
-      "gravity": 10.44,
-      "meanRadius": 58232,
-      "moons": 145,
-      "avgTemp": -178,
-      "orbitalPeriod": 10759,
-      "rotationPeriod": 10.7
-    },
-    {
-      "name": "Uranus",
-      "description": "A “reclining” planet due to the extreme tilt of its axis (98 degrees). It has a blue-green color due to methane in its atmosphere.",
-      "gravity": 8.69,
-      "meanRadius": 25362,
-      "moons": 27,
-      "avgTemp": -195,
-      "orbitalPeriod": 30687,
-      "rotationPeriod": -17.2
-    },
-    {
-      "name": "Neptune",
-      "description": "The farthest planet from the Sun. It has the strongest winds in the solar system with speeds of up to 2,100 km/h.",
-      "gravity": 11.15,
-      "meanRadius": 24622,
-      "moons": 14,
-      "avgTemp": -201,
-      "orbitalPeriod": 60190,
-      "rotationPeriod": 16.1
-    }
-  ]
-  
+{
+  "planetsData": [
+      {
+          "name": "Mercury",
+          "description": "The smallest and closest planet to the Sun. Its surface is filled with craters and is very hot during the day but very cold at night.",
+          "gravity": 3.7,
+          "meanRadius": 2439.7,
+          "moons": 0,
+          "avgTemp": 167,
+          "orbitalPeriod": 88,
+          "rotationPeriod": 1407.6,
+          "funFacts": [
+              {
+                  "id": 1,
+                  "fact": "It is the fastest planet, completing one orbit in 88 Earth days",
+                  "category": "orbit"
+              },
+              {
+                  "id": 2,
+                  "fact": "It has a cratered surface like the moon",
+                  "category": "surface"
+              },
+              {
+                  "id": 3,
+                  "fact": "Surface temperatures can vary drastically: -180°C to 430°C in a single day",
+                  "category": "temperature"
+              },
+              {
+                  "id": 4,
+                  "fact": "It has no atmosphere at all",
+                  "category": "atmosphere"
+              },
+              {
+                  "id": 5,
+                  "fact": "A day on Mercury is equivalent to 59 Earth days",
+                  "category": "rotation"
+              }
+          ]
+      },
+      {
+          "name": "Venus",
+          "description": "The hottest planet in the solar system due to the extreme greenhouse effect. Often called Earth's “sister” planet due to its similar size.",
+          "gravity": 8.87,
+          "meanRadius": 6051.8,
+          "moons": 0,
+          "avgTemp": 464,
+          "orbitalPeriod": 224.7,
+          "rotationPeriod": -5832.5,
+          "funFacts": [
+              {
+                  "id": 1,
+                  "fact": "Rotates counterclockwise (retrograde)",
+                  "category": "rotation"
+              },
+              {
+                  "id": 2,
+                  "fact": "The hottest planet in the Solar System, although not the closest to the Sun",
+                  "category": "temperature"
+              },
+              {
+                  "id": 3,
+                  "fact": "Its atmospheric pressure is 90 times that of Earth",
+                  "category": "atmosphere"
+              },
+              {
+                  "id": 4,
+                  "fact": "Named after the Roman goddess of love",
+                  "category": "trivia"
+              },
+              {
+                  "id": 5,
+                  "fact": "Can be seen from Earth without a telescope",
+                  "category": "visibility"
+              }
+          ]
+      },
+      {
+          "name": "Earth",
+          "description": "Our planet! The only planet known to have life. It has a perfect atmosphere and water in liquid form.",
+          "gravity": 9.8,
+          "meanRadius": 6371,
+          "moons": 1,
+          "avgTemp": 15,
+          "orbitalPeriod": 365.25,
+          "rotationPeriod": 24,
+          "funFacts": [
+              {
+                  "id": 1,
+                  "fact": "The only planet known to have life",
+                  "category": "biology"
+              },
+              {
+                  "id": 2,
+                  "fact": "71% of its surface is covered in water",
+                  "category": "surface"
+              },
+              {
+                  "id": 3,
+                  "fact": "Has an atmosphere that protects it from harmful radiation",
+                  "category": "atmosphere"
+              },
+              {
+                  "id": 4,
+                  "fact": "Rotates at a 23.5 degree tilt, causing seasons",
+                  "category": "rotation"
+              },
+              {
+                  "id": 5,
+                  "fact": "Has 1 natural moon with the closest distance to the parent planet",
+                  "category": "moon"
+              }
+          ]
+      },
+      {
+          "name": "Mars",
+          "description": "The red planet that is the target of human exploration. It has the highest mountains and deepest canyons in the solar system.",
+          "gravity": 3.71,
+          "meanRadius": 3389.5,
+          "moons": 2,
+          "avgTemp": -65,
+          "orbitalPeriod": 687,
+          "rotationPeriod": 24.6,
+          "funFacts": [
+              {
+                  "id": 1,
+                  "fact": "Called the Red Planet because it contains iron oxide on its surface",
+                  "category": "surface"
+              },
+              {
+                  "id": 2,
+                  "fact": "Has the highest mountain in the Solar System (Mount Olympus Mons)",
+                  "category": "geography"
+              },
+              {
+                  "id": 3,
+                  "fact": "Has 2 small moons: Phobos and Deimos",
+                  "category": "moon"
+              },
+              {
+                  "id": 4,
+                  "fact": "Once had liquid water on its surface",
+                  "category": "water"
+              },
+              {
+                  "id": 5,
+                  "fact": "A day on Mars is similar to a day on Earth (24 hours 37 minutes)",
+                  "category": "rotation"
+              }
+          ]
+      },
+      {
+          "name": "Jupiter",
+          "description": "The largest planet in the solar system. Has the Great Red Spot, a storm that has been going on for hundreds of years.",
+          "gravity": 24.79,
+          "meanRadius": 69911,
+          "moons": 92,
+          "avgTemp": -145,
+          "orbitalPeriod": 4333,
+          "rotationPeriod": 9.9,
+          "funFacts": [
+              {
+                  "id": 1,
+                  "fact": "The largest planet in the Solar System",
+                  "category": "size"
+              },
+              {
+                  "id": 2,
+                  "fact": "Has the Great Red Spot, a giant storm that has lasted for hundreds of years",
+                  "category": "atmosphere"
+              },
+              {
+                  "id": 3,
+                  "fact": "Has 95 identified moons",
+                  "category": "moon"
+              },
+              {
+                  "id": 4,
+                  "fact": "Has thin, barely visible rings",
+                  "category": "ring"
+              },
+              {
+                  "id": 5,
+                  "fact": "Jupiter's mass is 2.5 times the mass of all the other planets in the Solar System combined",
+                  "category": "mass"
+              }
+          ]
+      },
+      {
+          "name": "Saturn",
+          "description": "Famous for its beautiful rings made of ice and rock. It has a very low density and can float on water.",
+          "gravity": 10.44,
+          "meanRadius": 58232,
+          "moons": 145,
+          "avgTemp": -178,
+          "orbitalPeriod": 10759,
+          "rotationPeriod": 10.7,
+          "funFacts": [
+              {
+                  "id": 1,
+                  "fact": "The only planet with rings visible from Earth",
+                  "category": "ring"
+              },
+              {
+                  "id": 2,
+                  "fact": "It is lighter than water",
+                  "category": "density"
+              },
+              {
+                  "id": 3,
+                  "fact": "It has 146 identified moons",
+                  "category": "moon"
+              },
+              {
+                  "id": 4,
+                  "fact": "Its largest moon, Titan, has a thick atmosphere",
+                  "category": "moon"
+              },
+              {
+                  "id": 5,
+                  "fact": "A year on Saturn is equal to 29.5 Earth years",
+                  "category": "orbit"
+              }
+          ]
+      },
+      {
+          "name": "Uranus",
+          "description": "A “reclining” planet due to the extreme tilt of its axis (98 degrees). It has a blue-green color due to methane in its atmosphere.",
+          "gravity": 8.69,
+          "meanRadius": 25362,
+          "moons": 27,
+          "avgTemp": -195,
+          "orbitalPeriod": 30687,
+          "rotationPeriod": -17.2,
+          "funFacts": [
+              {
+                  "id": 1,
+                  "fact": "Rotates at a 98-degree angle, as if 'rolling' around the sun",
+                  "category": "rotation"
+              },
+              {
+                  "id": 2,
+                  "fact": "Blue-green in color due to methane",
+                  "category": "color"
+              },
+              {
+                  "id": 3,
+                  "fact": "Has a thin ring",
+                  "category": "ring"
+              },
+              {
+                  "id": 4,
+                  "fact": "Named after the Greek god of the sky",
+                  "category": "trivia"
+              },
+              {
+                  "id": 5,
+                  "fact": "Only one mission has ever come close to the planet (Voyager 2 in 1986)",
+                  "category": "exploration"
+              }
+          ]
+      },
+      {
+          "name": "Neptune",
+          "description": "The farthest planet from the Sun. It has the strongest winds in the solar system with speeds of up to 2,100 km/h.",
+          "gravity": 11.15,
+          "meanRadius": 24622,
+          "moons": 14,
+          "avgTemp": -201,
+          "orbitalPeriod": 60190,
+          "rotationPeriod": 16.1,
+          "funFacts": [
+              {
+                  "id": 1,
+                  "fact": "Coldest planet in the Solar System",
+                  "category": "temperature"
+              },
+              {
+                  "id": 2,
+                  "fact": "Has the fastest winds in the Solar System (reaching 2,100 km/h)",
+                  "category": "atmosphere"
+              },
+              {
+                  "id": 3,
+                  "fact": "The Great Dark Spot is similar to the Great Red Spot on Jupiter",
+                  "category": "atmosphere"
+              },
+              {
+                  "id": 4,
+                  "fact": "One year on Neptune is equivalent to 165 Earth years",
+                  "category": "orbit"
+              },
+              {
+                  "id": 5,
+                  "fact": "Dark blue color due to methane content",
+                  "category": "color"
+              }
+          ]
+      }
+  ],
+  "categories": [
+      "orbit",
+      "surface",
+      "temperature",
+      "atmosphere",
+      "rotation",
+      "biology",
+      "moon",
+      "size",
+      "geography",
+      "water",
+      "density",
+      "color",
+      "trivia",
+      "ring",
+      "mass",
+      "exploration",
+      "classification",
+      "location",
+      "visibility"
+  ],
+  "metadata": {
+      "version": "1.0",
+      "lastUpdated": "2024-11-26",
+      "totalPlanets": 8,
+      "totalFacts": 45
+  }
+}
