@@ -50,6 +50,14 @@ class HomeTab extends StatelessWidget {
               }
             },
           ),
+
+          const Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Text(
+              'Fun Facts',
+              style: TextStyle(fontSize: 24),
+            ),
+          ),
         ],
       ),
     );
