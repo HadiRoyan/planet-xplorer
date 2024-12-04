@@ -25,12 +25,12 @@ class PlanetBloc extends Bloc<PlanetEvent, PlanetState> {
 
     try {
       PlanetData data = await _planetRepository.loadPlanetData();
-      List<PlanetModel> planetModels = data.planetsData
+      List<PlanetModel> planetModels = data.planets
           .map((planet) => PlanetModel.fromPlanetWithAsset(planet))
           .toList();
 
       // print(planetModels);
-      emit(PlanetLoaded(planetModels));
+      emit(PlanetLoaded(planetModels, data));
     } catch (e) {
       // ignore: avoid_print
       print(e);

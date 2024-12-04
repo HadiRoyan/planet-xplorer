@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:planet_xplorer/data/provider/planet_provider.dart';
 import 'package:planet_xplorer/data/repository/planet_repository.dart';
+import 'package:planet_xplorer/logic/blocs/fun_fact_bloc/fun_fact_bloc.dart';
 import 'package:planet_xplorer/logic/blocs/planet_bloc/planet_bloc.dart';
 import 'package:planet_xplorer/logic/cubit/tab_cubit.dart';
 import 'package:planet_xplorer/ui/pages/setting_page.dart';
@@ -33,6 +34,9 @@ final GoRouter router = GoRouter(
                 ),
               )..add(LoadPlanetEvent()),
             ),
+            BlocProvider(
+              create: (context) => FunFactBloc(),
+            )
           ],
           child: const HomePage(),
         );

@@ -9,8 +9,9 @@ class PlanetLoading extends PlanetState {}
 
 class PlanetLoaded extends PlanetState {
   final List<PlanetModel> planetModels;
+  final PlanetData planetData;
 
-  PlanetLoaded(this.planetModels);
+  PlanetLoaded(this.planetModels, this.planetData);
 }
 
 class PlanetError extends PlanetState {

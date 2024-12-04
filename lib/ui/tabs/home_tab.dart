@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:planet_xplorer/core/constants/theme.dart';
+import 'package:planet_xplorer/logic/blocs/fun_fact_bloc/fun_fact_bloc.dart';
 import 'package:planet_xplorer/logic/blocs/planet_bloc/planet_bloc.dart';
 import 'package:planet_xplorer/ui/components/banner_image.dart';
 import 'package:planet_xplorer/ui/components/planet_card.dart';
@@ -23,7 +24,14 @@ class HomeTab extends StatelessWidget {
               style: TextStyle(fontSize: 24),
             ),
           ),
-          BlocBuilder<PlanetBloc, PlanetState>(
+          BlocConsumer<PlanetBloc, PlanetState>(
+            listener: (context, state) {
+              if (state is PlanetLoaded) {
+                BlocProvider.of<FunFactBloc>(context).add(
+                  LoadListFunFact(planetData: state.planetData),
+                );
+              }
+            },
             builder: (context, state) {
               if (state is PlanetLoaded) {
                 return Container(
@@ -50,7 +58,6 @@ class HomeTab extends StatelessWidget {
               }
             },
           ),
-
           const Padding(
             padding: EdgeInsets.all(16.0),
             child: Text(

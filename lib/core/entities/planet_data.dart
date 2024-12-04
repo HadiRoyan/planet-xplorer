@@ -4,19 +4,19 @@ import 'package:planet_xplorer/core/entities/metadata.dart';
 import 'package:planet_xplorer/core/entities/planet.dart';
 
 class PlanetData {
-  final List<Planet> planetsData;
+  final List<Planet> planets;
   final List<String> categories;
   final Metadata metadata;
 
   PlanetData({
-    required this.planetsData,
+    required this.planets,
     required this.categories,
     required this.metadata,
   });
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
-      'planetsData': planetsData.map((x) => x.toMap()).toList(),
+      'planetsData': planets.map((x) => x.toMap()).toList(),
       'categories': categories,
       'metadata': metadata.toMap(),
     };
@@ -24,7 +24,7 @@ class PlanetData {
 
   factory PlanetData.fromMap(Map<String, dynamic> map) {
     return PlanetData(
-      planetsData: List<Planet>.from(
+      planets: List<Planet>.from(
         (map['planetsData'] as List<dynamic>).map<Planet>(
           (x) => Planet.fromMap(x as Map<String, dynamic>),
         ),
@@ -43,5 +43,5 @@ class PlanetData {
 
   @override
   String toString() =>
-      'PlanetData(planetsData: $planetsData, categories: $categories, metadata: $metadata)';
+      'PlanetData(planetsData: $planets, categories: $categories, metadata: $metadata)';
 }
